@@ -99,3 +99,34 @@ p {
   background-color: #cccccc;
   color: white;
 }
+
+/*style for input tag*/
+input[type=text] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #cccccc;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#add-photo{
+  border-radius: 5px;
+  background-color: #808080;
+  width: 25%;
+  margin: auto;
+}
+
+#submit-photo{
+  margin: auto;
+  margin-left: 65%;
+}

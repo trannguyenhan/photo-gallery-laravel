@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Photo extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['link', 'id_album'];
+    protected $table = 'photos';
+    public $timestamps = false;
 }

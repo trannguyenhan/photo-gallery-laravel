@@ -15,7 +15,7 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        
+        return redirect("/");
     }
 
     /**
@@ -25,7 +25,7 @@ class PhotoController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -36,7 +36,13 @@ class PhotoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $link = $request->input('link');
+        $id_album = $request->input('id_album');
+
+        $photo = Photo::create(['link' => $link, 'id_album' => $id_album]);
+        $photo->save();
+
+        return redirect("/albums/".$id_album);
     }
 
     /**

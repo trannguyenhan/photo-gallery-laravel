@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link href="/css/photo.css" rel="stylesheet">
+  <script type="text/javascript" src="/js/photo.js"></script>
 </head>
 <body>
 
@@ -12,7 +13,18 @@
 <div class="header">
   <h1>{{ $album->album_name }}</h1>
   <p>The album consists of {{ $number_of_album }} images</p>
-  <button class="button">+</button>
+  <button class="button" onclick="click_add_button()">+</button>
+
+  <!-- Form CREATE NEW MODEL -->
+  <form id="add-photo" style="display: none;" action="/photos" method="POST">
+    @csrf
+    <br />
+    Link: <input type="text" name="link"><br />
+          <input type="text" value="{{ $album->id }}" name="id_album" style="display: none;"> 
+    <input type="submit" value="CREATE" id="submit-photo">
+    <br /><br />
+  </form>
+
 </div>
 
 <!-- Photo Grid -->
