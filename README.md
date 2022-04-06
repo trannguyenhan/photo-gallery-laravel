@@ -1,6 +1,40 @@
-## Run project
+## Install 
+
+Create `.env` file: 
+
+```bash
+cp .env.example .env
 ```
-import database from folder database/photo-gallery-laravel-database.sql
+
+If you run project with docker, modify your `.env` file with DATABASE same: 
+
+```
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=photo_gallery_laravel
+DB_USERNAME=trannguyenhan
+DB_PASSWORD=mysql12345
+```
+
+And run project with docker: 
+
+```bash
+docker-compose up
+localhost:8005
+```
+
+If you run project without docker, import database from folder `database/photo-gallery-laravel-database.sql` and modify your `.env` suitable with your database you config and run script: 
+
+```bash
+composer update
+composer install
+php artisan key:generate
+```
+
+Run project without docker:
+
+```bash
 php artisan serve
 localhost:8000
 ```
