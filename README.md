@@ -23,6 +23,12 @@ And run project with docker:
 docker-compose up
 localhost:8005
 ```
+Install dependency and gen key app: 
+
+```bash
+docker-compose exec app composer install
+docker-compose exec app php artisan key:generate
+```
 
 If you run project without docker, import database from folder `database/photo-gallery-laravel-database.sql` and modify your `.env` suitable with your database you config and run script: 
 
